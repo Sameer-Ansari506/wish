@@ -11,8 +11,17 @@ const FlowerAnimation = () => {
   }, []);
 
   return (
- <div>
-    <div class="night"></div>
+    <div className="master">
+        <div className="detail"><Flower/></div>
+        <div className="detail"><Flower/></div>
+    </div>
+  );
+};
+
+function Flower(){
+    return(
+    <div>
+<div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
@@ -312,8 +321,8 @@ const FlowerAnimation = () => {
       </div>
     </div>
     </div>
-  );
-};
+    )
+}
 
 const animatedStyle = {
     animation: `example 3s ease-in-out infinite`

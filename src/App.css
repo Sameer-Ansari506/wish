@@ -14,7 +14,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  background: linear-gradient(to right, #e72399, #f8a4c7);
+}
+
+#yes-btn {
+  background-color: lightgreen;
+  border: none;
+  transition: top 0.3s ease, left 0.3s ease;
 }
 
 .yes-button {
