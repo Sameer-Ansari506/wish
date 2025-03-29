@@ -24,7 +24,7 @@ const FunButtons = () => {
       display: "flex", 
       flexDirection: "column", 
       alignItems: "center", 
-      justifyContent: "center", 
+      justifyContent: "center",  
       height: "100vh", 
   background: "linear-gradient(to right, #00f758c, #00ff7eb3)"
     }}>
