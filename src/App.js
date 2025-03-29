@@ -9,7 +9,7 @@ function Home() {
       <FunButtons />
     </div>
   );
-}
+} 
 
 const NoPage = () => (
   <div className="container">
