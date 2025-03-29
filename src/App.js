@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
+import Flower from "./flower";
 
 function Home() {
   return (
@@ -28,7 +29,7 @@ const FunButtons = () => {
       height: "100vh", 
   background: "linear-gradient(to right, #ff758c, #ff7eb3)"
     }}>
-      <button style={buttonStyle} onClick={() => alert("You clicked Yes!")}>Yes</button>
+      <button style={buttonStyle} onClick={() => navigate("/flowers")}>Yes</button>
       <button style={buttonStyle} onClick={() => navigate("/no")}>No</button>
     </div>
   );
@@ -53,6 +54,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/no" element={<NoPage />} />
+        <Route path="/flowers" element={<Flower />} />
       </Routes>
     </Router>
   );
