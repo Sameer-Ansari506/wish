@@ -17,7 +17,7 @@ const NoPage = () => (
 );
 
 const FunButtons = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   return (
     <div style={{ 
