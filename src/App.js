@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 
 function Home() {
   return (
     <div className="container">
-      <FunButtons /> 
+      <FunButtons />
     </div>
   );
 }
@@ -24,9 +24,9 @@ const FunButtons = () => {
       display: "flex", 
       flexDirection: "column", 
       alignItems: "center", 
-      justifyContent: "center",  
+      justifyContent: "center", 
       height: "100vh", 
-  background: "linear-gradient(to right, #00f758c, #00ff7eb3)"
+  background: "linear-gradient(to right, #ff758c, #ff7eb3)"
     }}>
       <button style={buttonStyle} onClick={() => alert("You clicked Yes!")}>Yes</button>
       <button style={buttonStyle} onClick={() => navigate("/no")}>No</button>
