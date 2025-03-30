@@ -134,7 +134,7 @@ const FunButtons = () => {
         id="yes-btn"
         onClick={moveYesButton}
       >
-        Special Wish
+        Special Wish 
       </button>
       <div style={{ display: "flex", flexDirection: "column" }}>
         {count > 6 && !dataR && <p style = {{color:'white'}}>You can try this one maybe</p>}
