@@ -128,7 +128,7 @@ const FunButtons = () => {
           fontWeight: "bold",
           boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)",
           position: "absolute",
-          top: position.top,
+          top: position.top, 
           left: position.left
         }}
         id="yes-btn"
