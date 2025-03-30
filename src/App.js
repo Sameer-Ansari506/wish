@@ -110,7 +110,7 @@ const FunButtons = () => {
     count = count + 1;
   }
   else{
-    navigate("/deep")
+    navigate("/deep") 
   }
   };
 
