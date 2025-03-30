@@ -86,7 +86,7 @@ function NoPage (){
   <div className="container">
     <img src={cry} alt="Display" style={{ width: "120px", height: "120px", marginRight: "10px" }} />
     <h3 style={{color:"white"}}>You chose No again. I worked hard to prepare this, now go back and choose yes!</h3>
-    <button style={buttonStyle} onClick={() => navigate("/home/1")}>Simple Wish</button>
+    <button style={buttonStyle} onClick={() => navigate("/home/1")}>Go Back</button>
       
   </div>)
 }
