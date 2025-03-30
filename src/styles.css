@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -11,26 +10,11 @@
   --dark-color: #000;
 }
 
-.master {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    gap: 20px; /* Adds spacing between flowers */
-    flex-wrap: wrap; /* Ensures responsiveness */
-  }
-  
-  .detail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%; /* Each flower takes half of the row */
-    max-width: 300px; /* Adjust the max width as needed */
-  }
-  
 body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 100dvh;
+  min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
@@ -1000,7 +984,6 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: paused !important;
 }
-
 :root {
 --d: 3s;
 }
