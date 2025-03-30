@@ -1,5 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
  import "./styles.css"; // Import CSS
+
+
+ const msg = [
+  [
+    "🌸 The day has come with joy so bright  🌸",
+    "✨ Filling your heart with pure delight ✨",
+    "🌸 A day of joy , a day of cheer        🌸",
+    "✨ The day may bring smiles             ✨",
+    "🌸 To far and near                      🌸"
+  ]
+  ,
+  [
+    "✨ Your family be blessed            ✨",
+    "🌸 May your home with laughter shine 🌸",
+    "✨ On this day , so divine           ✨"
+  ],
+  [
+    "🌸 May you get all that is happy   🌸",
+    "✨ And it may stay                 ✨",
+    "🌸 May you thrive and you may      🌸",
+    "✨ Shine so bright , i always pray ✨",
+  ],
+  [
+    "N ew joys bloom like morning light     ✨",
+    "E ver your heart feels pure and bright 🌸",
+    "H ope and love in prayers high         ✨",
+    "A llah's blessings always nigh         🌸"
+  ],
+  [
+    "✨ May this day brings peace your way    ✨",
+    "🌸 Filling your life with joy each day   🌸",
+    "✨ Smiles and laughter, dreams come true ✨"
+  ]
+
+ ]
+
+ const eid = "🌸✨ Eid Mubarak to you ✨🌸"
  
  const FlowerAnimation = () => {
    useEffect(() => {
@@ -9,10 +46,62 @@ import React, { useEffect } from "react";
        document.body.classList.remove("not-loaded");
      }, 100); // Simulating a preloader effect
    }, []);
+
+
+    const [fade, setFade] = useState(true);
+       const [currentTextIndex, setCurrentTextIndex] = useState(0);useEffect(() => {
+           const showTime = 4000; // Stay visible for 3 seconds
+           const fadeTime = 2000; // Fade-out duration
+       
+           if(currentTextIndex < msg.length){
+           const timer = setTimeout(() => {
+             setFade(false); // Start fade-out
+       
+             setTimeout(() => {
+               setCurrentTextIndex((prevIndex) => prevIndex + 1); // Change text
+               setFade(true); // Start fade-in
+             }, fadeTime);
+           }, showTime);
+       
+           return () => clearTimeout(timer);
+       } 
+         }, [currentTextIndex]);
+       
+
  
    return (
   <div>
-     <div class="night"></div>
+     <div class="night">
+     <div style={{color:"white",display:"flex",justifyContent:"center",marginTop:"70px"}}>
+      
+      {currentTextIndex < msg.length && currentTextIndex!= 3 &&
+        <h4 className={fade ? "fade-in" : "fade-out"} style={{}}>
+          {msg[currentTextIndex].map((line, index) => (
+            <p key={index}>{line}</p>
+          ))}
+        </h4>
+      }
+
+    { currentTextIndex == 3 && 
+    <div>
+      {
+      msg[3].map((line, index) => (
+        <p key={index}>
+          <span style={{color:"pink",fontWeight:"bold",fontSize:'15px'}}>{line.charAt(0)}</span>
+          {line.slice(1)}
+        </p>
+      ))}
+    </div>
+    }
+
+
+      {!(currentTextIndex < msg.length) &&
+        <h4 className={fade ? "fade-in" : "fade-out"}>
+          {eid}
+        </h4>
+      }
+      </div>
+     </div>
      <div class="flowers">
        <div class="flower flower--1">
          <div class="flower__leafs flower__leafs--1">

@@ -4,6 +4,7 @@ import "./App.css";
 import Flower from "./flower";
 import fairy from './fairy.png';
 import cry from './crying.png';
+import Inter from "./inter";
 
 var count = 0;
 var dataR = 0;
@@ -84,7 +85,7 @@ function NoPage (){
   return(
   <div className="container">
     <img src={cry} alt="Display" style={{ width: "120px", height: "120px", marginRight: "10px" }} />
-    <h1 style={{color:"white"}}>You chose No again. I worked hard to prepare this, now go back and choose yes!</h1>
+    <h3 style={{color:"white"}}>You chose No again. I worked hard to prepare this, now go back and choose yes!</h3>
     <button style={buttonStyle} onClick={() => navigate("/home/1")}>Simple Wish</button>
       
   </div>)
@@ -109,7 +110,7 @@ const FunButtons = () => {
     count = count + 1;
   }
   else{
-    navigate("/flowers")
+    navigate("/deep")
   }
   };
 
@@ -164,6 +165,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home/:val" element={<Home />} />
         <Route path="/no" element={<NoPage />} />
+        <Route path="/deep" element={<Inter />} />
         <Route path="/flowers" element={<Flower />} />
       </Routes>
     </Router>
