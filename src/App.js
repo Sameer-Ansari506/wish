@@ -51,7 +51,7 @@ function Home() {
 
 const NoPage = () => (
   <div className="container">
-    <img 
+    <img  
         src={cry}
         alt="Display" 
         style={{ width: "150px", height: "150px", marginRight: "20px" }} 
