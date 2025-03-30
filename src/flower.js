@@ -100,7 +100,7 @@ import React, { useEffect,useState } from "react";
           {eid}
         </h4>
       }
-      </div>
+      </div> 
      </div>
      <div class="flowers">
        <div class="flower flower--1">
